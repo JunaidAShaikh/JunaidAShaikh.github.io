@@ -139,7 +139,7 @@
 				  $.getJSON("/demo.json",function(data){
 				  $.each(data.topic,function(i, topic){alert("Topic: "+i+" = "topic)};
 				  alert("Data: "+data.topic+"\nStatus: "+status);
-				  var topic=data.lin;
+				  var topic=data.topic;
 				  $("#Topics").html(topic);});				  
 				  $("#Topics").show();						  
 				});

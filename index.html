@@ -135,11 +135,12 @@
 		</script>
 		<script>$("#submit").click(function(){
 				  		
-				  $.getJSON("/demo.json",function(data, status){
+				   $("#Topics").show();		
+				  var topic='Entertainment';
+				  $.getJSON("/demo.json",function(data,status){
 				  alert("Data: "+data.topic+"\nStatus: "+status);});
-				  /*var topic=data.topic;
-				  $("#Topics").html(topic);*/				  
-				  $("#Topics").fadeIn();						  
+				  $("#Topics").html(topic);
+				  $("#Topics").show();						  
 				});
 			</script>
   </body>

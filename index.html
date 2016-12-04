@@ -137,6 +137,20 @@
 				  $("#Topics").show();
 				  $.getJSON("/demo.json",function(data,status){
 				  alert("Data: "+data.topic+"\nStatus: "+status);});
+				  $(#Topics).html(
+				  <div id="Topics">
+        <p>
+        <button type="button" class="btn btn-lg btn-default" id="topic1">data.topic</button>      
+        <button type="button" class="btn btn-lg btn-primary" id="primary">Primary</button>
+        <button type="button" class="btn btn-lg btn-success">Success</button>
+        <button type="button" class="btn btn-lg btn-info">bleh</button>
+        <button type="button" class="btn btn-lg btn-warning">Warning</button>
+        <button type="button" class="btn btn-lg btn-danger">Danger</button>
+        <button type="button" class="btn btn-lg btn-link">Link</button>
+      </p>
+      </div>
+				  )
+				  
 				});
 			</script>
   </body>

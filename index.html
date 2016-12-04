@@ -136,9 +136,9 @@
 		<script>$("#submit").click(function(){
 				  
 				  $("#Topics").show();		
-				  /*$.getJSON("/demo.json",function(data,status){
-				  alert("Data: "+data.topic+"\nStatus: "+status);});*/
-				  $(#Topics).html("<p><button type="button" class="btn btn-lg btn-default" id="topic1">"data.topic"</button></p>");
+				  $.getJSON("/demo.json",function(data,status){
+				  alert("Data: "+data.topic+"\nStatus: "+status);});
+				  $(#Topics).html(data.topic);
 				  $("#Topics").show();						  
 				});
 			</script>

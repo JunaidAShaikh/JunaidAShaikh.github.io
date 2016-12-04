@@ -136,11 +136,11 @@
 		<script>$("#submit").click(function(){
 				  				
 				  $.getJSON("/demo.json",function(data,status){
-				  alert("Data: "+data.topic+"\nStatus: "+status);});				  
+				  alert("Data: "+data.topic+"\nStatus: "+status);				  
 				  var topic=data.topic;
 				  $("#Topics").html('<button type="button" class="btn btn-lg btn-primary" id="primary">'+topic+'</button>');
 				  $("#Topics").fadeIn();						  
-				});
+				});});
 			</script>
   </body>
 </html>

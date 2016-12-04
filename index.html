@@ -134,12 +134,11 @@
 		});
 		</script>
 		<script>$("#submit").click(function(){
-				  
-				  $("#Topics").fadeIn();		
+				  		
 				  $.getJSON("/demo.json",function(data, status){
 				  alert("Data: "+data.topic+"\nStatus: "+status);
 				  var topic=data.topic;
-				  $("#Topics").html(topic);});				  
+				  $("#Topics").html(data.topic);});				  
 				  $("#Topics").fadeIn();						  
 				});
 			</script>

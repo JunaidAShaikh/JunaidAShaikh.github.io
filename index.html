@@ -136,7 +136,7 @@
 		<script>$("#submit").click(function(){
 				  
 				  $("#Topics").fadeIn();		
-				  $.getJSON("/demo.json",function(data){
+				  $.getJSON("/demo.json",function(data, status){
 				  alert("Data: "+data.topic+"\nStatus: "+status);
 				  var topic=data.topic;
 				  $("#Topics").html(topic);});				  

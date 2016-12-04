@@ -128,17 +128,14 @@
     <script src="/bootstrap-3.3.7/bootstrap-3.3.7/docs/dist/js/bootstrap.min.js"></script>
     <script src="/bootstrap-3.3.7/bootstrap-3.3.7/docs/assets/js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/bootstrap-3.3.7/bootstrap-3.3.7/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
     <script>$(document).ready(function(){
 			$("#Topics").hide();
 		});
 		</script>
 		<script>$("#submit").click(function(){
 				  $("#Topics").show();
-				$.getJSON('http://www.imdbapi.com/', dataString, function(html){
-//$("#more").after(html);
-alert("Success!"+dataString);
-});
+				  alert('Yayy!')
 
 				$.getJSON("https://drive.google.com/file/d/0B5BdY5DTCjjHMDFicmpMYlFtd1k/view?usp=sharing",function(data,status){
 					alert("Data: "+ data+"\nStatus: "+status);

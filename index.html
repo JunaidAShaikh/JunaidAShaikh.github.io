@@ -138,7 +138,7 @@
 				  $.getJSON("/demo.json",function(data,status){
 				  alert("Data: "+data.topic+"\nStatus: "+status);});				  
 				  var topic='Entertainment';
-				  $("#Topics").html(topic);
+				  $("#Topics").html('<button type="button" class="btn btn-lg btn-primary" id="primary">'+topic+'</button>');
 				  $("#Topics").fadeIn();						  
 				});
 			</script>

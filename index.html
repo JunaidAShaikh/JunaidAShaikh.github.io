@@ -136,10 +136,10 @@
 		<script>$("#submit").click(function(){
 				  
 				  $("#Topics").show();		
-				  var topic='Entertainment';
 				  $.getJSON("/demo.json",function(data,status){
-				  alert("Data: "+data.topic+"\nStatus: "+status);});
-				  $("#Topics").html(topic);
+				  alert("Data: "+data.topic+"\nStatus: "+status);
+				  var topic=data.topic;
+				  $("#Topics").html(topic);});				  
 				  $("#Topics").show();						  
 				});
 			</script>

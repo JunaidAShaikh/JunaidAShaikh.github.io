@@ -134,13 +134,12 @@
 		});
 		</script>
 		<script>$("#submit").click(function(){
-				  		
-				   $("#Topics").show();		
+				  				
 				  $.getJSON("/demo.json",function(data,status){
 				  alert("Data: "+data.topic+"\nStatus: "+status);});				  
 				  var topic='Entertainment';
 				  $("#Topics").html(topic);
-				  $("#Topics").show();						  
+				  $("#Topics").fadeIn();						  
 				});
 			</script>
   </body>

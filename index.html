@@ -136,9 +136,10 @@
 		<script>$("#submit").click(function(){
 				  
 				  $("#Topics").show();		
-				  $.getJSON("/demo.json",function(data,status){
+				  $.getJSON("/demo.json",function(data){
+				  $.each(data.topic,function(i, topic){alert("Topic: "+i+" = "topic)};
 				  alert("Data: "+data.topic+"\nStatus: "+status);
-				  var topic=data.topic;
+				  var topic=data.lin;
 				  $("#Topics").html(topic);});				  
 				  $("#Topics").show();						  
 				});

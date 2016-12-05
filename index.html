@@ -133,9 +133,11 @@
 			$("#Topics").hide();
 		});
 		</script>
-		<script>$("#submit").click(function(){
+		
+
+		<script>$("#submit").click(function(){		
 				  				
-				  $.getJSON("/demo.json",function(data,status){
+				  /*$.getJSON("/demo.json",function(data,status){
 				  //alert("Data: "+data.topic+"\nStatus: "+status);				  
 				  var topic=["1","2","3"];
 				  var buttons="", i;
@@ -146,7 +148,21 @@
 				  console.log(buttons);
 				  $("#Topics").html(buttons);
 				  $("#Topics").fadeIn();						  
-				});});
+				});*/
+				var topic;
+				var buttons="", i;
+				
+				$.getJSON("/demo.json",function(data,status){
+				$.each(data, function(index,Tweet){
+				topic[index]=Tweet.topic;});
+				  tlen=topic.length;
+				  for(i=0;i<tlen;i++){
+				  buttons+="<button type=\"button\" class=\"btn btn-lg btn-primary\" id=\"primary\">"+topic[i]+"</button>";
+				  }
+				  console.log(buttons);
+				  $("#Topics").html(buttons);
+				  $("#Topics").fadeIn();	
+				});
 			</script>
   </body>
 </html>

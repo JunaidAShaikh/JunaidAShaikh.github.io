@@ -148,7 +148,19 @@
 				topic.push(tweet.topic);
 				console.log(topic[index]);
 				console.log(topic.length);});
-				console.log(topic.length);});			
+				console.log(topic.length);
+				
+				console.log(topic.length);
+				  tlen=topic.length;
+				  console.log(tlen);
+				  for(i=0;i<tlen;i++){
+				  buttons+="<button type=\"button\" class=\"btn btn-lg btn-primary\" id=\"primary\">"+topic[i]+"</button>";
+				  }
+				  console.log(buttons);
+				  $("#Topics").html(buttons);
+				  $("#Topics").fadeIn();	
+				});
+				});			
 				  /*$.getJSON("/demo.json",function(data,status){
 				  //alert("Data: "+data.topic+"\nStatus: "+status);				  
 				  var topic=["1","2","3"];
@@ -168,16 +180,7 @@
 				console.log(tweet);});*/
 				
 
-				console.log(topic.length);
-				  tlen=topic.length;
-				  console.log(tlen);
-				  for(i=0;i<tlen;i++){
-				  buttons+="<button type=\"button\" class=\"btn btn-lg btn-primary\" id=\"primary\">"+topic[i]+"</button>";
-				  }
-				  console.log(buttons);
-				  $("#Topics").html(buttons);
-				  $("#Topics").fadeIn();	
-				});
+				
 			</script>
   </body>
 </html>

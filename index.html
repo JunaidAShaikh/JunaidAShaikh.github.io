@@ -158,7 +158,8 @@
 				console.log(tweet);});
 				
 				$.getJSON("/demo.json",function(data,status){		
-				console.log(data.topic);});
+				console.log(data.topic);
+				alert("Data: "+data.topic+"\nStatus: "+status)});
 				
 				  tlen=topic.length;
 				  console.log(tlen);

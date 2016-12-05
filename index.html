@@ -157,15 +157,11 @@
 				topic[index]=tweet;
 				console.log(tweet);});
 				
-				/*$.getJSON("/demo.json",function(data,status){		
-				console.log(data.topic);
-				$.each([1,2,3], function(index,tweet){
-				console.log(tweet);
-				topic[index]=tweet;
-				console.log(tweet);});});*/
+				$.getJSON("/demo.json",function(data,status){		
+				console.log(data.topic);});
+				
 				  tlen=topic.length;
 				  console.log(tlen);
-				alert("data3: "+tlen);
 				  for(i=0;i<tlen;i++){
 				  buttons+="<button type=\"button\" class=\"btn btn-lg btn-primary\" id=\"primary\">"+topic[i]+"</button>";
 				  }

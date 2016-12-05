@@ -144,6 +144,7 @@
 				$.getJSON("/demo.json",function(data,status){
 				alert("Data: "+data.topic+"\nStatus: "+status);
 				$.each(data, function(index,tweet){
+				console(index);
 				console.log(data.topic);
 				console.log(tweet.topic);
 				console.log(data);

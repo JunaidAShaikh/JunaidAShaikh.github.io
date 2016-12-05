@@ -139,14 +139,14 @@
 		
 				
 				var topic=[];
-				var buttons="", i;
+				var buttons="", i, tlen;
 				
 				
 				$.getJSON("demo.json",function(data,status){
 				$.each(data, function(index,tweet){
 				console.log(index+" : "+tweet.topic);
 				topic.push(tweet.topic);
-				console.log(topic[index])});});			
+				console.log(topic[index]);});});			
 				  /*$.getJSON("/demo.json",function(data,status){
 				  //alert("Data: "+data.topic+"\nStatus: "+status);				  
 				  var topic=["1","2","3"];

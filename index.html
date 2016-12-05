@@ -155,6 +155,7 @@
 				$.getJSON("/demo.json",function(data,status){				
 				alert("data1: ");
 				$.each(data.topic, function(index,tweet){
+				console.log(data.topic);
 				topic[index]=tweet;
 				console.log(tweet);
 				alert("data2: ");});});

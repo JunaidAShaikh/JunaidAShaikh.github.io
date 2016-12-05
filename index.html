@@ -142,14 +142,16 @@
 				var buttons="", i;
 				
 				$.getJSON("/demo.json",function(data,status){
+				alert("Data: "+data.topic+"\nStatus: "+status);});
+				
+				$.getJSON("/demo.json",function(data,status){
 				alert("Data: "+data.topic+"\nStatus: "+status);
 				$.each(data, function(index,tweet){
-				console.log(index);
 				console.log(data.topic);
 				console.log(tweet.topic);
 				console.log(data);
 				console.log(tweet);
-				topic[index]=data.id;});});			
+				topic[index]=data.topic;});});			
 				  /*$.getJSON("/demo.json",function(data,status){
 				  //alert("Data: "+data.topic+"\nStatus: "+status);				  
 				  var topic=["1","2","3"];

@@ -152,12 +152,17 @@
 				var topic=[];
 				var buttons="", i;
 				
-				$.getJSON("/demo.json",function(data,status){		
+				$.each([1,2,3], function(index,tweet){
+				console.log(tweet);
+				topic[index]=tweet;
+				console.log(tweet);});
+				
+				/*$.getJSON("/demo.json",function(data,status){		
 				console.log(data.topic);
 				$.each([1,2,3], function(index,tweet){
 				console.log(tweet);
 				topic[index]=tweet;
-				console.log(tweet);});});
+				console.log(tweet);});});*/
 				  tlen=topic.length;
 				  console.log(tlen);
 				alert("data3: "+tlen);

@@ -154,9 +154,9 @@
 				
 				$.getJSON("/demo.json",function(data,status){				
 				alert("data1: ");
-				$.each(data, function(index){
-				topic[index]=data.topic;
-				console.log(data.topic);
+				$.each(data.topic, function(index,tweet){
+				topic[index]=tweet;
+				console.log(tweet);
 				alert("data2: ");});});
 				  tlen=topic.length;
 				alert("data3: "+tlen);

@@ -144,9 +144,8 @@
 				$.getJSON("/demo.json",function(data,status){
 				alert("Data: "+data.topic+"\nStatus: "+status);
 				$.each(data, function(index,tweet){
-				console.log(tweet);
-				topic[index]=tweet;
-				console.log(tweet);});});			
+				console.log(tweet.topic);
+				topic[index]=tweet.topic;});});			
 				  /*$.getJSON("/demo.json",function(data,status){
 				  //alert("Data: "+data.topic+"\nStatus: "+status);				  
 				  var topic=["1","2","3"];

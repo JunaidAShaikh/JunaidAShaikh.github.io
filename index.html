@@ -141,8 +141,6 @@
 				var topic=[];
 				var buttons="", i;
 				
-				$.getJSON("demo.json",function(data,status){
-				alert("Data: "+data.topic+"\nStatus: "+status);});
 				
 				$.getJSON("demo.json",function(data,status){
 				alert("Data: "+data.topic+"\nStatus: "+status);
@@ -151,7 +149,7 @@
 				console.log(tweet.topic);
 				console.log(data);
 				console.log(tweet);
-				topic[index]=data.topic;});});			
+				topic[index]=tweet.topic;});});			
 				  /*$.getJSON("/demo.json",function(data,status){
 				  //alert("Data: "+data.topic+"\nStatus: "+status);				  
 				  var topic=["1","2","3"];

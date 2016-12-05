@@ -138,14 +138,14 @@
 		<script>$("#submit").click(function(){		
 		
 				
-				var topic=["dummy"];
+				var topic=[];
 				var buttons="", i;
 				
 				
 				$.getJSON("demo.json",function(data,status){
 				$.each(data, function(index,tweet){
 				console.log(index+" : "+tweet.topic);
-				topic[index]=" "+tweet.topic;
+				topic.push=(tweet.topic);
 				console.log(topic[index])});});			
 				  /*$.getJSON("/demo.json",function(data,status){
 				  //alert("Data: "+data.topic+"\nStatus: "+status);				  

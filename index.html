@@ -152,11 +152,14 @@
 				var topic;
 				var buttons="", i;
 				
-				$.getJSON("/demo.json",function(data,status){
+				$.getJSON("/demo.json",function(data,status){				
+				alert("data1: ");
 				$.each(data, function(index,Tweet){
+				
+				alert("data2: ");
 				topic[index]=Tweet.topic;				});});
 				  tlen=topic.length;
-				alert("data: ");
+				alert("data3: ");
 				  for(i=0;i<tlen;i++){
 				  buttons+="<button type=\"button\" class=\"btn btn-lg btn-primary\" id=\"primary\">"+topic[i]+"</button>";
 				  }

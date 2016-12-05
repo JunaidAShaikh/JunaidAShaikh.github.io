@@ -154,7 +154,8 @@
 				
 				$.getJSON("/demo.json",function(data,status){
 				$.each(data, function(index,Tweet){
-				topic[index]=Tweet.topic;});
+				topic[index]=Tweet.topic;				
+				alert("data: "+topic[index])});
 				  tlen=topic.length;
 				  for(i=0;i<tlen;i++){
 				  buttons+="<button type=\"button\" class=\"btn btn-lg btn-primary\" id=\"primary\">"+topic[i]+"</button>";

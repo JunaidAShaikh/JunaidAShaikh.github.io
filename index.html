@@ -143,10 +143,10 @@
 				
 				
 				$.getJSON("demo.json",function(data,status){
-				alert("Data: "+data.topic+"\nStatus: "+status);
 				$.each(data, function(index,tweet){
-				console.log(index);
-				topic[index]=" "+tweet.topic;});});			
+				console.log(index+" : "+tweet.topic);
+				topic[index]=" "+tweet.topic;
+				console.log(topic[index])});});			
 				  /*$.getJSON("/demo.json",function(data,status){
 				  //alert("Data: "+data.topic+"\nStatus: "+status);				  
 				  var topic=["1","2","3"];

@@ -154,11 +154,11 @@
 				
 				$.getJSON("/demo.json",function(data,status){				
 				alert("data1: ");
+				console.log(data.topic);
 				$.each(data.topic, function(index,tweet){
 				console.log(data.topic);
 				topic[index]=tweet;
-				console.log(tweet);
-				alert("data2: ");});});
+				console.log(tweet);});});
 				  tlen=topic.length;
 				  console.log(tlen);
 				alert("data3: "+tlen);

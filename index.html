@@ -152,11 +152,10 @@
 				var topic=[];
 				var buttons="", i;
 				
-				$.getJSON("/demo.json",function(data,status){				
-				alert("data1: ");
+				$.getJSON("/demo.json",function(data,status){		
 				console.log(data.topic);
-				$.each(data.topic, function(index,tweet){
-				console.log(data.topic);
+				$.each([1,2,3], function(index,tweet){
+				console.log(tweet);
 				topic[index]=tweet;
 				console.log(tweet);});});
 				  tlen=topic.length;

@@ -137,9 +137,10 @@
 
 		<script>$("#submit").click(function(){		
 		
-				$.getJSON("/demo.json",function(data,status){		
+				console.log("Before");
+				$.getJSON("/demo.json",function(data,status){
 				alert("Data: "+data.topic+"\nStatus: "+status);});				  				
-				
+				console.log("After");
 				  /*$.getJSON("/demo.json",function(data,status){
 				  //alert("Data: "+data.topic+"\nStatus: "+status);				  
 				  var topic=["1","2","3"];

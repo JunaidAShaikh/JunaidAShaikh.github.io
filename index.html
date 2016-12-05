@@ -138,18 +138,15 @@
 		<script>$("#submit").click(function(){		
 		
 				
-				var topic=[];
+				var topic=["dummy"];
 				var buttons="", i;
 				
 				
 				$.getJSON("demo.json",function(data,status){
 				alert("Data: "+data.topic+"\nStatus: "+status);
 				$.each(data, function(index,tweet){
-				console.log(data.topic);
-				console.log(tweet.topic);
-				console.log(data);
-				console.log(tweet);
-				topic[index]=tweet.topic;});});			
+				console.log(index);
+				topic[index]=" "+tweet.topic;});});			
 				  /*$.getJSON("/demo.json",function(data,status){
 				  //alert("Data: "+data.topic+"\nStatus: "+status);				  
 				  var topic=["1","2","3"];

@@ -155,9 +155,9 @@
 				$.getJSON("/demo.json",function(data,status){				
 				alert("data1: ");
 				$.each(data, function(index,Tweet){
-				console.log(Tweet);
-				alert("data2: ");
-				topic[index]=Tweet.topic;				});});
+				topic[index]=Tweet.topic;
+				console.log(Tweet.topic);
+				alert("data2: ");});});
 				  tlen=topic.length;
 				alert("data3: ");
 				  for(i=0;i<tlen;i++){

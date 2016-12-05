@@ -177,7 +177,7 @@ if (query.length == 0) {
 return;
 }
 
-var url='https://35.162.182.179:8983/solr/VSM/select?indent=on&q='+query+'&version=2.2&start=0&rows=50&indent=on&wt=json&callback=?&json.wrf=on_data';
+var url='http://35.162.182.179:8983/solr/VSM/select?indent=on&q='+query+'&version=2.2&start=0&rows=50&indent=on&wt=json&callback=?&json.wrf=on_data';
 $.getJSON(url);
 }
 

@@ -182,14 +182,14 @@ var url='http://35.162.182.179:8983/solr/VSM/select?indent=on&q='+query+'&versio
 $.getJSON(url);
 }
 	
-	console.log("url: "+url);
+	console.log("url: ");
 
 function on_ready() {
-	console.log("url: "+url);
+	console.log("url: ");
 $('#search').click(on_search);
 /* Hook enter to search */
 $('body').keypress(function(e) {
-	console.log("url: "+url);
+	console.log("url: ");
 if (e.keyCode == '13') {
 on_search();
 }

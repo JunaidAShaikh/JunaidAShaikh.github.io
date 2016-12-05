@@ -151,10 +151,10 @@
 				});*/
 				var topic;
 				var buttons="", i;
-				alert("data: ");
+				
 				$.getJSON("/demo.json",function(data,status){
 				$.each(data, function(index,Tweet){
-				topic[index]=Tweet.topic;				});
+				topic[index]=Tweet.topic;				});});
 				  tlen=topic.length;
 				alert("data: ");
 				  for(i=0;i<tlen;i++){
@@ -163,7 +163,7 @@
 				  console.log(buttons);
 				  $("#Topics").html(buttons);
 				  $("#Topics").fadeIn();	
-				});});
+				});
 			</script>
   </body>
 </html>

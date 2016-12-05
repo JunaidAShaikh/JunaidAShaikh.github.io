@@ -155,9 +155,58 @@
 				  $("#Topics").fadeIn();	
 				});
 				});			
-				
-
-				
+								
 			</script>
+			
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>
+function on_data(data) {
+$('#results').empty();
+var docs = data.response.docs;
+$.each(docs, function(i, item) {
+$('#results').prepend($('<div>' + item.text_en + '</div>'));
+});
+
+var total = 'Found ' + docs.length + ' results';
+$('#results').prepend('<div>' + total + '</div>');
+}
+
+function on_search() {
+var query = $('#query').val();
+if (query.length == 0) {
+return;
+}
+
+var url='http://35.162.182.179:8983/solr/VSM/select?indent=on&q='+query+'&version=2.2&start=0&rows=50&indent=on&wt=json&callback=?&json.wrf=on_data';
+$.getJSON(url);
+}
+
+function on_ready() {
+$('#search').click(on_search);
+/* Hook enter to search */
+$('body').keypress(function(e) {
+if (e.keyCode == '13') {
+on_search();
+}
+});
+}
+
+$(document).ready(on_ready);
+</script>
+<div class="jumbotron">
+<center>
+<h1>Search</h1>
+Query: <input id="query" placeholder="enter your query here"/> 
+<!-- <input type="search" name="search" id="search" placeholder="enter your query here"> -->
+<br>
+</br>
+<button id="search">Search</button>
+</div>
+
+</div>
+<div id="results">
+</center>
+</div>
+			
   </body>
 </html>

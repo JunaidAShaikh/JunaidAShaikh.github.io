@@ -154,10 +154,10 @@
 				
 				$.getJSON("/demo.json",function(data,status){				
 				alert("data1: ");
-				$.each(data, function(index,data){
-				
+				$.each(data, function(index,Tweet){
+				console.log(Tweet);
 				alert("data2: ");
-				topic[index]=data.topic;				});});
+				topic[index]=Tweet.topic;				});});
 				  tlen=topic.length;
 				alert("data3: ");
 				  for(i=0;i<tlen;i++){

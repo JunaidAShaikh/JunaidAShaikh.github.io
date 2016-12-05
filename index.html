@@ -160,9 +160,11 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script>
 function on_data(data) {
+	console.log("url: ");
 $('#results').empty();
 var docs = data.response.docs;
 $.each(docs, function(i, item) {
+	console.log("url: ");
 $('#results').prepend($('<div>' + item.text_en + '</div>'));
 });
 
@@ -179,11 +181,15 @@ return;
 var url='http://35.162.182.179:8983/solr/VSM/select?indent=on&q='+query+'&version=2.2&start=0&rows=50&indent=on&wt=json&callback=?&json.wrf=on_data';
 $.getJSON(url);
 }
+	
+	console.log("url: "+url);
 
 function on_ready() {
+	console.log("url: "+url);
 $('#search').click(on_search);
 /* Hook enter to search */
 $('body').keypress(function(e) {
+	console.log("url: "+url);
 if (e.keyCode == '13') {
 on_search();
 }

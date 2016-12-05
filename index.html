@@ -136,7 +136,7 @@
 		
 
 		<script>$("#submit").click(function(){		
-				  alert("data: ");				
+				  				
 				  /*$.getJSON("/demo.json",function(data,status){
 				  //alert("Data: "+data.topic+"\nStatus: "+status);				  
 				  var topic=["1","2","3"];
@@ -151,7 +151,7 @@
 				});*/
 				var topic;
 				var buttons="", i;
-				
+				alert("data: ");
 				$.getJSON("/demo.json",function(data,status){
 				$.each(data, function(index,Tweet){
 				topic[index]=Tweet.topic;				});

@@ -141,10 +141,10 @@
 				var topic=[];
 				var buttons="", i;
 				
-				$.getJSON("/demo.json",function(data,status){
+				$.getJSON("demo.json",function(data,status){
 				alert("Data: "+data.topic+"\nStatus: "+status);});
 				
-				$.getJSON("/demo.json",function(data,status){
+				$.getJSON("demo.json",function(data,status){
 				alert("Data: "+data.topic+"\nStatus: "+status);
 				$.each(data, function(index,tweet){
 				console.log(data.topic);
